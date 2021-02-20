@@ -4,6 +4,7 @@ import { StyleSheet, FlatList, Text, View } from "react-native";
 
 import SongListItem from "../components/SongListItem/SongListItem";
 import albumDetails from "../data/AlbumDetails";
+import AlbumHeader from "../components/AlbumHeader/AlbumHeader";
 
 const AlbumScreen = () => {
   const route = useRoute();
@@ -18,6 +19,7 @@ const AlbumScreen = () => {
         data={albumDetails.songs}
         renderItem={({ item }) => <SongListItem song={item} />}
         keyExtractor={(item) => item.id}
+        ListHeaderComponent={() => <AlbumHeader album={albumDetails} />}
       />
     </View>
   );
