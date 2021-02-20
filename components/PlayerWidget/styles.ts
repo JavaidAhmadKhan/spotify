@@ -5,12 +5,16 @@ const styles = StyleSheet.create({
         position: "absolute",
         bottom: 48,
         backgroundColor: "#252625",
-        flexDirection: 'row',
         width: "100%",
         borderWidth: 2,
         borderColor: 'black',
-        alignItems: 'center',
-
+    },
+    row: {
+        flexDirection: 'row',
+    },
+    progress: {
+        height: 5,
+        backgroundColor: '#bcbcbc',
     },
     rightContainer: {
         flex: 1,
@@ -43,7 +47,9 @@ const styles = StyleSheet.create({
     artist: {
         color: 'lightgray',
         fontSize: 18
-    }
+    },
+
+
 })
 
 export default styles
